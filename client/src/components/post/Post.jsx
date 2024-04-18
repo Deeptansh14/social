@@ -23,8 +23,7 @@ const Post = ({ post }) => {
             <div className="details">
               <Link
                 to={`/profile/${post.userId}`}
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
+                style={{ textDecoration: "none", color: "inherit" }}>
                 <span className="name">{post.name}</span>
               </Link>
               <span className="date">1 min ago</span>
@@ -33,7 +32,7 @@ const Post = ({ post }) => {
           <MoreHorizIcon />
         </div>
         <div className="content">
-          <p>{post.desc}</p>
+          <p>{post.content}</p>
           <img src={post.img} alt="" />
         </div>
         <div className="info">

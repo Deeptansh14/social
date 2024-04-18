@@ -1,8 +1,8 @@
 import express from "express";
 const app = express()
 import userRoutes from "./routes/users.js"
-//import profileRoutes from "./routes/profiles.js"
-//import postRoutes from "./routes/posts.js"
+
+import postRoutes from "./routes/posts.js"
 //import commentRoutes from "./routes/comments.js"
 import authRoutes from "./routes/auth.js"
 import cookieParser from "cookie-parser"
@@ -22,9 +22,9 @@ app.use(
 app.use(cookieParser())
 app.use("/api/auth", authRoutes)
 app.use("/api/users", userRoutes)
-//app.use("/api/posts", postRoutes)
+app.use("/api/posts", postRoutes)
 //app.use("/api/comments", commentRoutes)
-//app.use("/api/profiles", profileRoutes)
+
 
 app.listen(8800,()=>{
     console.log("API Working")
