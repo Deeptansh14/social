@@ -1,7 +1,4 @@
 import "./share.scss";
-import Image from "../../assets/img.png";
-import Map from "../../assets/map.png";
-import Friend from "../../assets/friend.png";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/authContext";
 import { useMutation, useQueryClient } from "react-query";
@@ -20,7 +17,6 @@ const Share = () => {
     },
     {
       onSuccess: () => {
-      
         queryClient.invalidateQueries("posts");
       },
     }
@@ -29,7 +25,7 @@ const Share = () => {
   const handleClick = (e) => {
     e.preventDefault();
     mutation.mutate({ content });
-    
+    setContent('')
   };
 
   return (
@@ -40,7 +36,7 @@ const Share = () => {
             <img src={currentUser.profilePic} alt="" />
             <input
               type="text"
-              placeholder={`What's on your mind ${currentUser.name}?`}
+              placeholder={`What's on your mind ?`}
               onChange={(e) => setContent(e.target.value)}
               value={content}
             />

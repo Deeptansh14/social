@@ -33,10 +33,12 @@
             flex-direction: column;
 
             .name {
-              font-weight: 500;
+              font-weight: 600;
+              font-size: large;
             }
 
             .date {
+              padding-top: 5px;
               font-size: 12px;
             }
           }
@@ -44,14 +46,7 @@
       }
 
       .content {
-        margin: 20px 0px;
-
-        img {
-          width: 100%;
-          max-height: 500px;
-          object-fit: cover;
-          margin-top: 20px;
-        }
+        margin: 20px 1px;
       }
 
       .info {
